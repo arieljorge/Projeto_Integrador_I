@@ -1,16 +1,27 @@
 package com.puc.projeto.business;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Usuario {
 
-	protected String nome;
-	protected String cidade;
-	protected String estado;
-	protected String unidadeDeSaude;
-	protected Date dataNascimento;
+	private String nome;
+	private String cidade;
+	private String estado;
+	private String unidadeDeSaude;
+	private Date dataNascimento;
+	
+	private ArrayList<Vacina> vacinas;
 	
 	public Usuario() {}
+	
+	public Usuario(String nome, String cidade, String estado, String unidade, Date dataNascimento) {
+		this.nome = nome;
+		this.cidade = cidade;
+		this.estado = estado;
+		this.unidadeDeSaude = unidade;
+		this.dataNascimento = dataNascimento;
+	}
 	
 	public void setNome(String nome) {
 		this.nome = nome;
@@ -32,6 +43,10 @@ public class Usuario {
 		this.dataNascimento = data;
 	}
 	
+	public void setVacina(Vacina vacina) {
+		this.vacinas.add(vacina);
+	}
+	
 	public String getNome() {
 		return this.nome;
 	}
@@ -50,5 +65,9 @@ public class Usuario {
 	
 	public Date getData() {
 		return this.dataNascimento;
+	}
+	
+	public ArrayList<Vacina> getVacinas() {
+		return this.vacinas;
 	}
 }

@@ -2,7 +2,7 @@ package com.puc.projeto.main;
 
 import javax.swing.JOptionPane;
 
-import com.puc.projeto.business.Usuario;
+import com.puc.projeto.business.*;
 
 public class Main {
 
