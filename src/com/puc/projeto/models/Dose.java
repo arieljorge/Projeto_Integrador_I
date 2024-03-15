@@ -1,4 +1,4 @@
-package com.puc.projeto.business;
+package com.puc.projeto.models;
 
 import java.util.Date;
 

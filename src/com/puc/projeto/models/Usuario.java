@@ -1,4 +1,4 @@
-package com.puc.projeto.business;
+package com.puc.projeto.models;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,17 +10,21 @@ public class Usuario {
 	private String estado;
 	private String unidadeDeSaude;
 	private Date dataNascimento;
+	private Sexo sexo;
+	private boolean gestante;
 	
 	private ArrayList<Vacina> vacinas;
 	
 	public Usuario() {}
 	
-	public Usuario(String nome, String cidade, String estado, String unidade, Date dataNascimento) {
+	public Usuario(String nome, String cidade, String estado, String unidade, Date dataNascimento, Sexo sexo, boolean gestante) {
 		this.nome = nome;
 		this.cidade = cidade;
 		this.estado = estado;
 		this.unidadeDeSaude = unidade;
 		this.dataNascimento = dataNascimento;
+		this.sexo = sexo;
+		this.gestante = gestante;
 	}
 	
 	public void setNome(String nome) {
@@ -47,6 +51,18 @@ public class Usuario {
 		this.vacinas.add(vacina);
 	}
 	
+	public void setVacinas(ArrayList<Vacina> vacinas) {
+		this.vacinas = vacinas;
+	}
+	
+	public void setSexo(Sexo sexo) {
+		this.sexo = sexo;
+	}
+	
+	public void setGestante(boolean gestante) {
+		this.gestante = gestante;
+	}
+	
 	public String getNome() {
 		return this.nome;
 	}
@@ -69,5 +85,13 @@ public class Usuario {
 	
 	public ArrayList<Vacina> getVacinas() {
 		return this.vacinas;
+	}
+	
+	public Sexo getSexo() {
+		return this.sexo;
+	}
+	
+	public boolean getGestante() {
+		return this.gestante;
 	}
 }
